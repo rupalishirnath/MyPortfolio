@@ -12,7 +12,12 @@
 <body>
   <header class="header">
     <nav>
-      <ul class="nav-links">
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -34,9 +39,7 @@
                     <div class="line"> </div>
                     <p class="p1">Final Year student pursuing B.Tech. in Electronics & Telecommunication Engineering
                         from SGGSIE&T,Nanded</p>
-                    <p class="p2">I'm a passionate web developer skilled in HTML, CSS, JavaScript, and React. I build
-                        responsive, user-friendly websites and love learning new technologies while writing clean,
-                        efficient code.</p>
+                    <p class="p2">I'm a passionate software developer who builds responsive, user-friendly web applications. I enjoy creating seamless digital experiences and take pride in writing clean, efficient code. Always eager to learn, I continuously explore new technologies to improve my craft.</p>
 
                         
           </div>
@@ -117,6 +120,16 @@
         <h2 class="project-title">Departmental Academic Portal</h2>
         <p class="project-desc">Developed a user-focused web application for E&TC students (1st to final year) to efficiently access and download categorized PYQs. The platform streamlines academic preparation through easy navigation and robust filtering by subject, semester, and year, enhancing resource sharing and departmental knowledge management.</p>
         <a href="https://calm-custard-32829f.netlify.app/" target="_blank" class="project-link">View More</a>
+      </div>
+
+
+      <div class="project-card">
+        <i class="fas fa-shopping-cart project-icon"></i>
+        <h2 class="project-title">Moody Player</h2>
+        <p class="project-desc">Moody Player is a MERN stack music app that uses Face API to detect user emotions via webcam.
+Based on the detected facial expression, it recommends songs that match the user’s mood.
+It integrates real-time mood detection with smart, personalized music suggestions.</p>
+        <a href="https://6889324b751ed31fa80668a0--stately-dieffenbachia-6f39d9.netlify.app/" target="_blank" class="project-link">View More</a>
       </div>
 
       
@@ -200,5 +213,15 @@
   <footer>
     <p>© 2025 Rupali Shirnath. All rights reserved.</p>
   </footer>
+
+
+  <script>
+  const hamburger = document.getElementById('hamburger-btn');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('nav-active');
+    hamburger.classList.toggle('is-active');
+  });
+</script>
 </body>
 </html>
